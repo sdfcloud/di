@@ -1,57 +1,36 @@
 <?php
-
-/**
- *    __  _____   ___   __          __
- *   / / / /   | <  /  / /   ____ _/ /_  _____
- *  / / / / /| | / /  / /   / __ `/ __ `/ ___/
- * / /_/ / ___ |/ /  / /___/ /_/ / /_/ (__  )
- * `____/_/  |_/_/  /_____/`__,_/_.___/____/
- *
- * @package FireDI
- * @author UA1 Labs Developers https://ua1.us
- * @copyright Copyright (c) UA1 Labs
- */
-
-namespace Test\UA1Labs\Fire\Di;
+namespace Test\Sdfcloud\Di;
 
 use \UA1Labs\Fire\Test\TestCase;
-use \UA1Labs\Fire\Di\Graph;
-use \Throwable;
+use \Sdfcloud\Di\Graph;
 
-class GraphTestCase extends TestCase
-{
+class GraphTestCase extends TestCase {
     /**
-     * The FireDi Graph Class
-     *
-     * @var \UA1Labs\Fire\Di\Graph
+     * The Di Graph Class
+     * @var \Sdfcloud\Di\Graph
      */
     private $graph;
 
-    public function beforeEach()
-    {
+    public function beforeEach() {
         $this->graph = new Graph();
     }
 
-    public function afterEach()
-    {
+    public function afterEach() {
         unset($this->graph);
     }
 
-    public function testConstructor()
-    {
+    public function testConstructor() {
         $this->should('Not throw an exception when the class is constructed');
         $this->assert(true);
     }
 
-    public function testAddResource()
-    {
+    public function testAddResource() {
         $this->should('Add a resource to the resource graph.');
         $this->graph->addResource('Resource');
         $this->assert($this->graph->isResource('Resource'));
     }
 
-    public function testAddDependencies()
-    {
+    public function testAddDependencies() {
         $this->should('Add dependencies to a resource.');
         $dependencies = ['Dependency1', 'Dependency2'];
         $this->graph->addResource('MyResource');
@@ -59,16 +38,14 @@ class GraphTestCase extends TestCase
         $this->assert($this->graph->getDependencies('MyResource') === $dependencies);
     }
 
-    public function testAddDependency()
-    {
+    public function testAddDependency() {
         $this->should('Add a dependency to a resource.');
         $this->graph->addResource('MyResource');
         $this->graph->addDependency('MyResource', 'Dependency1');
         $this->assert($this->graph->getDependencies('MyResource') === ['Dependency1']);
     }
 
-    public function testRunDependencyCheck()
-    {
+    public function testRunDependencyCheck() {
         $this->should('Return an error code of "1" (Resourece Not Found).');
         $this->graph->addResource('Resource1');
         $this->graph->addDependency('Resource1', 'Resource2');
@@ -90,8 +67,7 @@ class GraphTestCase extends TestCase
         $this->assert(isset($check->resourceId) && $check->resourceId === 'Resource2');
     }
 
-    public function testGetDependencyResolveOrder()
-    {
+    public function testGetDependencyResolveOrder() {
         $this->should('Resolve dependencies in the order they need to be resolved.');
         $this->graph->addResource('Resource1');
         $this->graph->addResource('Resource2');
@@ -103,8 +79,7 @@ class GraphTestCase extends TestCase
         $this->assert($resolveOrder === ['Resource3', 'Resource2']);
     }
 
-    public function testResetDependencyCheck()
-    {
+    public function testResetDependencyCheck() {
         $this->should('Reset a dependency check.');
         $this->graph->addResource('Resource1');
         $this->graph->addResource('Resource2');
@@ -114,5 +89,4 @@ class GraphTestCase extends TestCase
         $resolveOrder = $this->graph->getDependencyResolveOrder('Resource1');
         $this->assert(empty($resolveOrder));
     }
-
 }

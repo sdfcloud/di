@@ -1,60 +1,41 @@
 <?php
+namespace Sdfcloud;
 
-/**
- *    __  _____   ___   __          __
- *   / / / /   | <  /  / /   ____ _/ /_  _____
- *  / / / / /| | / /  / /   / __ `/ __ `/ ___/
- * / /_/ / ___ |/ /  / /___/ /_/ / /_/ (__  )
- * `____/_/  |_/_/  /_____/`__,_/_.___/____/
- *
- * @package FireDI
- * @author UA1 Labs Developers https://ua1.us
- * @copyright Copyright (c) UA1 Labs
- */
-
-namespace UA1Labs\Fire;
-
-use \ReflectionClass;
-use \UA1Labs\Fire\Di\Graph;
-use \UA1Labs\Fire\Di\ClassDefinition;
-use \UA1Labs\Fire\Di\NotFoundException;
-use \UA1Labs\Fire\DiException;
+use \Sdfcloud\Di\Graph;
+use \Sdfcloud\Di\ClassDefinition;
+use \Sdfcloud\Di\NotFoundException;
+use \Sdfcloud\DiException;
 use \Psr\Container\ContainerInterface;
 
 /**
  * The Di class is what makes dependency injection possible. This class handles the
  * entire dependency injection environment.
  */
-class Di implements ContainerInterface
-{
+class Di implements ContainerInterface {
 
     /**
      * A map that stores all class definitions.
-     *
-     * @var array<\UA1Labs\Fire\Di\ClassDefinition>
+     * @var \Sdfcloud\Di\ClassDefinition[]
      */
     private $classDefinitions;
 
     /**
      * Stores objects and callables for resolving depedencies.
-     *
-     * @var array<mixed>
+     * @var mixed[]
      */
     private $objectCache;
 
     /**
      * A dependency graph containing information about classes
      * and their dependencies.
-     *
-     * @var \UA1Labs\Fire\Di\Graph
+     * @var \Sdfcloud\Di\Graph
      */
     private $classDependencyGraph;
 
     /**
      * The class constructor.
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->classDefinitions = [];
         $this->objectCache = [];
         $this->classDependencyGraph = new Graph();
@@ -62,23 +43,19 @@ class Di implements ContainerInterface
 
     /**
      * Puts an object into the object cache that is used to resolve dependencies.
-     *
      * @param string $classname The classname the instance object should resolve for
      * @param object|callable $entry The object or callable you'd like to place in the object cache
      */
-    public function set($classname, $entry)
-    {
+    public function set($classname, $entry) {
         $this->setCachedObject($classname, $entry);
     }
 
     /**
      * Determines if the class can be resolved.
-     *
      * @param string $classname The classname of the instance you would like to resolve
      * @return boolean
      */
-    public function has($classname)
-    {
+    public function has($classname) {
         try {
             $resolved = $this->resolveInstanceObject($classname);
             return true;
@@ -90,13 +67,11 @@ class Di implements ContainerInterface
     /**
      * Attempts to retrieve an instance object of the given classname by resolving its
      * dependencies and creating an instance of the object.
-     *
      * @param $classname string The class you would like to instantiate
-     * @throws \UA1Labs\Fire\Di\NotFoundException If the class cannot be resolved
+     * @throws \Sdfcloud\Di\NotFoundException If the class cannot be resolved
      * @return object The instantiated object based on the $classname
      */
-    public function get($classname)
-    {
+    public function get($classname) {
         if (!$this->has($classname)) {
             $errorMessage = sprintf(NotFoundException::ERROR_NOT_FOUND_IN_CONTAINER, $classname);
             throw new NotFoundException($errorMessage);
@@ -106,13 +81,11 @@ class Di implements ContainerInterface
 
     /**
      * Returns an instance object for the given classname and dependencies.
-     *
      * @param string $classname
-     * @param array<object> $dependencies
+     * @param object[] $dependencies
      * @return object
      */
-    public function getWith($classname, $dependencies)
-    {
+    public function getWith($classname, $dependencies) {
         // if the class doesn't have a class definition we should attempt
         // to register the class definition
         if (!$this->isClassDefinitionRegistered($classname)) {
@@ -124,40 +97,33 @@ class Di implements ContainerInterface
 
     /**
      * Returns the entire object cache.
-     *
-     * @return array<mixed>
+     * @return mixed[]
      */
-    public function getObjectCache()
-    {
+    public function getObjectCache() {
         return $this->objectCache;
     }
 
     /**
      * Clears the object cache.
      */
-    public function clearObjectCache()
-    {
+    public function clearObjectCache() {
         $this->objectCache = [];
     }
 
     /**
      * Determines if a object already has been cached for the given class.
-     *
      * @return boolean
      */
-    private function isObjectCached($classname)
-    {
+    private function isObjectCached($classname) {
         return isset($this->objectCache[$classname]);
     }
 
     /**
      * Returns the cached object if it exists. Otherwise it returns null.
-     *
      * @param string $classname The classname you want to obtain the object for.
      * @return mixed|null
      */
-    private function getCachedObject($classname)
-    {
+    private function getCachedObject($classname) {
         if ($this->isObjectCached($classname)) {
             $cachedObject = $this->objectCache[$classname];
 
@@ -173,35 +139,29 @@ class Di implements ContainerInterface
 
     /**
      * Sets the object in object cache.
-     *
      * @param string $classname The class you want to set the object cache for
      * @param mixed $object The object you want to set the object cache for
      */
-    private function setCachedObject($classname, $object)
-    {
+    private function setCachedObject($classname, $object) {
         $this->objectCache[$classname] = $object;
     }
 
     /**
-     * Determines if a class definition has already been registered with FireDI.
-     *
+     * Determines if a class definition has already been registered with Di.
      * @param string $classname
      * @return boolean
      */
-    private function isClassDefinitionRegistered($classname)
-    {
+    private function isClassDefinitionRegistered($classname) {
         return isset($this->classDefinitions[$classname]);
     }
 
     /**
-     * Registers a class definition with FireDI.
-     *
+     * Registers a class definition with Di.
      * @param string $classname The class you would like to register
      * @throws DiException if the class does not exist
      * @return void
      */
-    private function registerClassDefinition($classname)
-    {
+    private function registerClassDefinition($classname) {
         if (!class_exists($classname)) {
             $errorMessage = sprintf(DiException::ERROR_CLASS_NOT_FOUND, $classname);
             throw new DiException($errorMessage);
@@ -217,12 +177,10 @@ class Di implements ContainerInterface
 
     /**
      * Returns the class definition object if it has been registered. Otherwise returns null.
-     *
      * @param string $classname
      * @return object|void
      */
-    private function getClassDefinition($classname)
-    {
+    private function getClassDefinition($classname) {
         if ($this->isClassDefinitionRegistered($classname)) {
             return $this->classDefinitions[$classname];
         }
@@ -234,12 +192,10 @@ class Di implements ContainerInterface
      * This method is used to resolve an instance object and all of its dependencies. When
      * resolving a dependency, this method will run recursively to resolve all dependencies
      * in the dependency tree.
-     *
      * @param $classname The classname of the instance object you would like to resolve
      * @return mixed The resolved instance object
      */
-    private function resolveInstanceObject($classname)
-    {
+    private function resolveInstanceObject($classname) {
         // return object from the object cache if it is there
         if ($this->isObjectCached($classname)) {
             return $this->getCachedObject($classname);
@@ -271,11 +227,9 @@ class Di implements ContainerInterface
      * dependency graph. As a note, this is a recursive function and we do a
      * circular dependency error check before we start to register any of the
      * current class's depenencies to ensure we don't end up in an infinite loop.
-     *
      * @param string $classname The class you would like to register the dependencies for.
      */
-    private function registerDependentClassDefinitions($classname)
-    {
+    private function registerDependentClassDefinitions($classname) {
         if (!$this->isObjectCached($classname)) {
             $classDefinition = $this->getClassDefinition($classname);
             foreach ($classDefinition->dependencies as $dependency) {
@@ -293,13 +247,11 @@ class Di implements ContainerInterface
     /**
      * Validates that dependencies are able to be resolved. Also determines if there
      * are any circular dependencies.
-     *
      * @param string $classname The class you are checking dependencies for
      * @throws DiException
-     * @return array<string> The order we need to resolve dependencies
+     * @return string[] The order we need to resolve dependencies
      */
-    private function circularDependencyErrorCheck($classname)
-    {
+    private function circularDependencyErrorCheck($classname) {
         $error = $this->classDependencyGraph->runDependencyCheck($classname);
         if ($error) {
             switch ($error->code) {
@@ -315,12 +267,10 @@ class Di implements ContainerInterface
 
     /**
      * Instanciates a class with its given resolved dependencies.
-     *
      * @param string $classname The class you want to instanciate
-     * @param array<mixed> $resolvedDependencies The class dependencies
+     * @param mixed[] $resolvedDependencies The class dependencies
      */
-    private function instanciateClass($classname, $resolvedDependencies, $cache = false)
-    {
+    private function instanciateClass($classname, $resolvedDependencies, $cache = false) {
         $classDefinition = $this->getClassDefinition($classname);
         $classDef = $classDefinition->classDef;
         $resolvedObj = $classDef->newInstanceArgs($resolvedDependencies);

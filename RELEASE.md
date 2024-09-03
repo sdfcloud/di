@@ -1,4 +1,7 @@
 # Release Changes
+
+* 3.0.0
+    * Rebranded from FireDi to Sdfcloud/Di
 * 2.1.1
     * Fixed issues with firebug version collision.
 * 2.1.0
