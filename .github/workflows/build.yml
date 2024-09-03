@@ -1,4 +1,4 @@
-name: Sdfcloud-DI Build
+name: Sdfcloud/Di Build
 
 on: [push]
 
