@@ -1,4 +1,4 @@
-name: FireDi Build
+name: Sdfcloud-DI Build
 
 on: [push]
 

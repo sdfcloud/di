@@ -1,39 +1,23 @@
 <?php
-
-/**
- *    __  _____   ___   __          __
- *   / / / /   | <  /  / /   ____ _/ /_  _____
- *  / / / / /| | / /  / /   / __ `/ __ `/ ___/
- * / /_/ / ___ |/ /  / /___/ /_/ / /_/ (__  )
- * `____/_/  |_/_/  /_____/`__,_/_.___/____/
- *
- * @package FireDI
- * @author UA1 Labs Developers https://ua1.us
- * @copyright Copyright (c) UA1 Labs
- */
-
-namespace UA1Labs\Fire\Di;
+namespace Sdfcloud\Di;
 
 use \ReflectionClass;
-use \UA1Labs\Fire\DiException;
+use \Sdfcloud\DiException;
 use \ReflectionException;
 
 /**
- * This class is meant to wrap a class being registered with FireDI.
+ * This class is meant to wrap a class being registered with Di.
  */
-class ClassDefinition
-{
+class ClassDefinition {
 
     /**
      * The ID of the service
-     *
      * @var string
      */
     public $serviceId;
 
     /**
      * A reflection object that defines this particular service.
-     *
      * @var \ReflectionClass
      */
     public $classDef;
@@ -42,8 +26,7 @@ class ClassDefinition
      * An array that stores the names of the variables defined in the $closure.
      * The names of the variables of the $closure defines what services this
      * service depends on.
-     *
-     * @var array<string>
+     * @var string[]
      */
     public $dependencies;
 
@@ -51,11 +34,9 @@ class ClassDefinition
      * The constructor sets up the service object to be stored until zulfberht
      * determines that the service should be relocated into the ulfberht
      * runtime environment.
-     *
      * @param string $classname The class you would like to wrap in an ulfberhtservice.
      */
-    public function __construct($classname)
-    {
+    public function __construct($classname) {
         $this->serviceId = $classname;
         $this->classDef = new ReflectionClass($classname);
         $this->dependencies = [];
@@ -67,7 +48,7 @@ class ClassDefinition
             if (!empty($parameters)) {
                 foreach ($parameters as $parameter) {
                     try {
-                        $dependency = $parameter->getClass();
+                        $dependency = $parameter->getType();
                         if ($dependency) {
                             $this->dependencies[] = $dependency->getName();
                         } else {

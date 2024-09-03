@@ -1,28 +1,22 @@
 {
-    "name": "ua1-labs/firedi",
-    "version": "2.1.4",
-    "description": "FireDI is a powerful and light weight PHP dependency injection library.",
+    "name": "sdfcloud/di",
+    "version": "3.0.0",
+    "description": "sdfcloud\\di is a powerful and lightweight php dependency injection library.",
     "license": "MIT",
     "authors": [
         {
-            "name": "UA1 Labs",
-            "email": "development@ua1.us"
+            "name": "Josh Johnson",
+            "email": "josh@sdfcloud.co"
         }
     ],
     "keywords": [
-        "firestudio",
-        "firedi",
-        "fire",
-        "ua1labs",
-        "ua1",
-        "ua1-labs",
         "di",
         "dependency injection",
         "dependency injector"
     ],
     "type": "library",
     "scripts": {
-        "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/UA1Labs --ext=.TestCase.php"
+        "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/src/Sdfcloud --ext=.TestSuite.php"
     },
     "require": {
         "ua1-labs/firebug": "2.*",
@@ -33,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "UA1Labs\\": "UA1Labs/"
+            "Sdfcloud\\": "src/Sdfcloud/"
         }
     }
 }

@@ -1,8 +1,8 @@
-# FireDI - PHP Dependency Injection (DI)
+# Sdfcloud/Di - PHP Dependency Injection (DI)
 
 A light weight PHP dependency injection library featuring automatic, constructor based, dependency resolution. When you need a new object from a class definition just simply ask for it. Any dependencies type hinted on the constructor will be resolved and injected before the class is instantiated into an object.
 
-The whole reason for FireDI to exist is to manage and resolve dependencies for you. The Dependency Injection design pattern provides you with the ability to decouple class dependencies across your entire application by resolving these dependencies for you.
+The whole reason for Sdfcloud/Di to exist is to manage and resolve dependencies for you. The Dependency Injection design pattern provides you with the ability to decouple class dependencies across your entire application by resolving these dependencies for you.
 
 Features:
 
@@ -14,15 +14,15 @@ Features:
 
 ## Documentation
 
-https://ua1.us/projects/firedi/
+TBD
 
-## Install FireDI Using Composer
+## Install Di Using Composer
 
-    composer require ua1-labs/firedi
+    composer require sdfcloud/di
 
 ## Getting Started
 
-Let's say you would like to get an instantiated object `MyClass1`. Well `MyClass1` requires that you pass into its constructor `MyClass2`. FireDI will resolve `MyClass2` and automatically inject it into `MyClass1` and return the instantiated object `MyClass1` to you.
+Let's say you would like to get an instantiated object `MyClass1`. Well `MyClass1` requires that you pass into its constructor `MyClass2`. Sdfcloud/Di will resolve `MyClass2` and automatically inject it into `MyClass1` and return the instantiated object `MyClass1` to you.
 
 __MyClass1__
 
@@ -35,10 +35,10 @@ __MyClass2__
 
     class MyClass2 {}
 
-__FireDI In Action__
+__Di In Action__
 
-    // instantiate firedi
-    $firedi = new UA1Labs\Fire\Di();
+    // instantiate di
+    $di = new Sdfcloud\Di();
 
     // obtain an object and have it's dependencies resolved for you
-    $myClass1 = $firedi->get('MyClass1');
+    $myClass1 = $di->get('MyClass1');
