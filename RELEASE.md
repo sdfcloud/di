@@ -1,4 +1,6 @@
 # Release Changes
+* 3.0.2
+    * Adjustments documentation configuration for the API.
 * 3.0.1
     * Integrated phpDocumentor and added API docs.
 * 3.0.0
