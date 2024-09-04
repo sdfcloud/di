@@ -1,5 +1,6 @@
 # Release Changes
-
+* 3.0.1
+    * Integrated phpDocumentor and added API docs.
 * 3.0.0
     * Rebranded from FireDi to Sdfcloud/Di
 * 2.1.1

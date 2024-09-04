@@ -1,6 +1,6 @@
 {
     "name": "sdfcloud/di",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "description": "sdfcloud\\di is a powerful and lightweight php dependency injection library.",
     "license": "MIT",
     "authors": [
@@ -16,7 +16,8 @@
     ],
     "type": "library",
     "scripts": {
-        "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/src/Sdfcloud --ext=.TestSuite.php"
+        "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/src/Sdfcloud --ext=.TestSuite.php",
+        "build:docs": "php phpDocumentor.phar run -d . -t docs/api"
     },
     "require": {
         "ua1-labs/firebug": "2.*",
