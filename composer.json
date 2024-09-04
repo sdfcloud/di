@@ -16,7 +16,8 @@
     ],
     "type": "library",
     "scripts": {
-        "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/src/Sdfcloud --ext=.TestSuite.php"
+        "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/src/Sdfcloud --ext=.TestSuite.php",
+        "build:docs": "php phpDocumentor.phar run -d . -t docs/api"
     },
     "require": {
         "ua1-labs/firebug": "2.*",
