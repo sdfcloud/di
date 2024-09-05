@@ -41,6 +41,8 @@ class ClassDefinitionTestSuite extends TestCase {
 /**
  * Test classes need for tests.
  */
+
+
 class MyTestClass {
     public function __construct(MyDependentClass $stdClass) {}
 }
