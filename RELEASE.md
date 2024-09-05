@@ -1,4 +1,6 @@
 # Release Changes
+* 3.0.3
+    * Removed Test namespace from api docs.
 * 3.0.2
     * Adjustments documentation configuration for the API.
 * 3.0.1

@@ -5,6 +5,7 @@ namespace Sdfcloud\Di;
  * This class makes it to easy to manage a dependency network
  * by allowing you to run dependency checks on all of the resources you have
  * available in your network.
+ * @package Sdfcloud
  */
 class Graph {
 

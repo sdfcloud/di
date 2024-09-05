@@ -199,46 +199,37 @@ class DiTestSuite extends TestCase {
 /**
  * Test classes for testing dependency injection
  */
-class TestClassA
-{
-    public function __construct(TestClassB $B)
-    {}
+
+
+class TestClassA {
+    public function __construct(TestClassB $B) {}
 }
 
-class TestClassB
-{
+class TestClassB {
     public $C;
 
-    public function __construct(TestClassC $C)
-    {
+    public function __construct(TestClassC $C) {
         $this->C = $C;
     }
 }
 
-class TestClassC
-{}
+class TestClassC {}
 
-class TestClassD
-{
+class TestClassD {
     public $A;
     public $B;
 
-    public function __construct(TestClassA $A, TestClassB $B)
-    {
+    public function __construct(TestClassA $A, TestClassB $B) {
         $this->A = $A;
         $this->B = $B;
     }
 }
 
-class TestClassAA
-{
-    public function __construct(TestClassBB $BB)
-    {}
+class TestClassAA {
+    public function __construct(TestClassBB $BB) {}
 }
 
-class TestClassBB
-{
-    public function __construct(TestClassAA $AA)
-    {}
+class TestClassBB {
+    public function __construct(TestClassAA $AA) {}
 }
 

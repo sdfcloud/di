@@ -7,6 +7,7 @@ use \ReflectionException;
 
 /**
  * This class is meant to wrap a class being registered with Di.
+ * @package Sdfcloud
  */
 class ClassDefinition {
 

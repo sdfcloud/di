@@ -10,6 +10,7 @@ use \Psr\Container\ContainerInterface;
 /**
  * The Di class is what makes dependency injection possible. This class handles the
  * entire dependency injection environment.
+ * @package Sdfcloud
  */
 class Di implements ContainerInterface {
 

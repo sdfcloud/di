@@ -26,46 +26,6 @@ Search.appendIndex(
             "summary": "An\u0020array\u0020that\u0020stores\u0020the\u0020names\u0020of\u0020the\u0020variables\u0020defined\u0020in\u0020the\u0020\u0024closure.",
             "url": "classes/Sdfcloud-Di-ClassDefinition.html#property_dependencies"
         },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\ClassDefinitionTestSuite",
-            "name": "ClassDefinitionTestSuite",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-ClassDefinitionTestSuite.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\ClassDefinitionTestSuite\u003A\u003AbeforeEach\u0028\u0029",
-            "name": "beforeEach",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-ClassDefinitionTestSuite.html#method_beforeEach"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\ClassDefinitionTestSuite\u003A\u003AafterEach\u0028\u0029",
-            "name": "afterEach",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-ClassDefinitionTestSuite.html#method_afterEach"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\ClassDefinitionTestSuite\u003A\u003AtestConstructor\u0028\u0029",
-            "name": "testConstructor",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-ClassDefinitionTestSuite.html#method_testConstructor"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\ClassDefinitionTestSuite\u003A\u003A\u0024classDefinition",
-            "name": "classDefinition",
-            "summary": "The\u0020Di\u0020ClassDefinition\u0020Class",
-            "url": "classes/Test-Sdfcloud-Di-ClassDefinitionTestSuite.html#property_classDefinition"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\MyTestClass",
-            "name": "MyTestClass",
-            "summary": "Test\u0020classes\u0020need\u0020for\u0020tests.",
-            "url": "classes/Test-Sdfcloud-Di-MyTestClass.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\MyTestClass\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-MyTestClass.html#method___construct"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\MyDependentClass",
-            "name": "MyDependentClass",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-MyDependentClass.html"
-        },                {
             "fqsen": "\\Sdfcloud\\Di\\Graph",
             "name": "Graph",
             "summary": "This\u0020class\u0020makes\u0020it\u0020to\u0020easy\u0020to\u0020manage\u0020a\u0020dependency\u0020network\nby\u0020allowing\u0020you\u0020to\u0020run\u0020dependency\u0020checks\u0020on\u0020all\u0020of\u0020the\u0020resources\u0020you\u0020have\navailable\u0020in\u0020your\u0020network.",
@@ -155,61 +115,6 @@ Search.appendIndex(
             "name": "errorCodes",
             "summary": "Contains\u0020an\u0020error\u0020code\u0020configuration\u0020for\u0020determining\u0020which\nerror\u0020codes\u0020would\u0020be\u0020sent\u0020back\u0020to\u0020the\u0020client\u0020using\u0020this\u0020class.",
             "url": "classes/Sdfcloud-Di-Graph.html#property_errorCodes"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase",
-            "name": "GraphTestCase",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AbeforeEach\u0028\u0029",
-            "name": "beforeEach",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_beforeEach"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AafterEach\u0028\u0029",
-            "name": "afterEach",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_afterEach"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestConstructor\u0028\u0029",
-            "name": "testConstructor",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testConstructor"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestAddResource\u0028\u0029",
-            "name": "testAddResource",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testAddResource"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestAddDependencies\u0028\u0029",
-            "name": "testAddDependencies",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testAddDependencies"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestAddDependency\u0028\u0029",
-            "name": "testAddDependency",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testAddDependency"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestRunDependencyCheck\u0028\u0029",
-            "name": "testRunDependencyCheck",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testRunDependencyCheck"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestGetDependencyResolveOrder\u0028\u0029",
-            "name": "testGetDependencyResolveOrder",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testGetDependencyResolveOrder"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003AtestResetDependencyCheck\u0028\u0029",
-            "name": "testResetDependencyCheck",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#method_testResetDependencyCheck"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di\\GraphTestCase\u003A\u003A\u0024graph",
-            "name": "graph",
-            "summary": "The\u0020Di\u0020Graph\u0020Class",
-            "url": "classes/Test-Sdfcloud-Di-GraphTestCase.html#property_graph"
         },                {
             "fqsen": "\\Sdfcloud\\Di\\NotFoundException",
             "name": "NotFoundException",
@@ -326,136 +231,6 @@ Search.appendIndex(
             "summary": "A\u0020dependency\u0020graph\u0020containing\u0020information\u0020about\u0020classes\nand\u0020their\u0020dependencies.",
             "url": "classes/Sdfcloud-Di.html#property_classDependencyGraph"
         },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite",
-            "name": "DiTestSuite",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AbeforeEach\u0028\u0029",
-            "name": "beforeEach",
-            "summary": "beforeEach\u0020callback.",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_beforeEach"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AafterEach\u0028\u0029",
-            "name": "afterEach",
-            "summary": "afterEach\u0020callback.",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_afterEach"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestConstructor\u0028\u0029",
-            "name": "testConstructor",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testConstructor"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestSetObject\u0028\u0029",
-            "name": "testSetObject",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testSetObject"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestSetCallable\u0028\u0029",
-            "name": "testSetCallable",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testSetCallable"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestHasObject\u0028\u0029",
-            "name": "testHasObject",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testHasObject"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestGetObject\u0028\u0029",
-            "name": "testGetObject",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testGetObject"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestGetWithObject\u0028\u0029",
-            "name": "testGetWithObject",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testGetWithObject"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestGetObjectCache\u0028\u0029",
-            "name": "testGetObjectCache",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testGetObjectCache"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003AtestClearObjectCache\u0028\u0029",
-            "name": "testClearObjectCache",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#method_testClearObjectCache"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\DiTestSuite\u003A\u003A\u0024di",
-            "name": "di",
-            "summary": "The\u0020Di\u0020object\u0020instance",
-            "url": "classes/Test-Sdfcloud-DiTestSuite.html#property_di"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassA",
-            "name": "TestClassA",
-            "summary": "Test\u0020classes\u0020for\u0020testing\u0020dependency\u0020injection",
-            "url": "classes/Test-Sdfcloud-TestClassA.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassA\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassA.html#method___construct"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassB",
-            "name": "TestClassB",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassB.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassB\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassB.html#method___construct"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassB\u003A\u003A\u0024C",
-            "name": "C",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassB.html#property_C"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassC",
-            "name": "TestClassC",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassC.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassD",
-            "name": "TestClassD",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassD.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassD\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassD.html#method___construct"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassD\u003A\u003A\u0024A",
-            "name": "A",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassD.html#property_A"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassD\u003A\u003A\u0024B",
-            "name": "B",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassD.html#property_B"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassAA",
-            "name": "TestClassAA",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassAA.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassAA\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassAA.html#method___construct"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassBB",
-            "name": "TestClassBB",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassBB.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud\\TestClassBB\u003A\u003A__construct\u0028\u0029",
-            "name": "__construct",
-            "summary": "",
-            "url": "classes/Test-Sdfcloud-TestClassBB.html#method___construct"
-        },                {
             "fqsen": "\\Sdfcloud\\DiException",
             "name": "DiException",
             "summary": "Exception\u0020thrown\u0020from\u0020di\u0020library.",
@@ -481,24 +256,9 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/sdfcloud-di.html"
         },                {
-            "fqsen": "\\Test\\Sdfcloud\\Di",
-            "name": "Di",
-            "summary": "",
-            "url": "namespaces/test-sdfcloud-di.html"
-        },                {
             "fqsen": "\\Sdfcloud",
             "name": "Sdfcloud",
             "summary": "",
             "url": "namespaces/sdfcloud.html"
-        },                {
-            "fqsen": "\\Test\\Sdfcloud",
-            "name": "Sdfcloud",
-            "summary": "",
-            "url": "namespaces/test-sdfcloud.html"
-        },                {
-            "fqsen": "\\Test",
-            "name": "Test",
-            "summary": "",
-            "url": "namespaces/test.html"
         }            ]
 );
