@@ -17,7 +17,8 @@
     "type": "library",
     "scripts": {
         "test": "php vendor/ua1-labs/firetest/scripts/runner.php --dir=/src/Sdfcloud --ext=.TestSuite.php",
-        "build:docs": "php phpDocumentor.phar --defaultpackagename=Sdfcloud --ignore=**/*.TestSuite.php run -d src -t docs/api"
+        "build:docs": "php phpDocumentor.phar --defaultpackagename=Sdfcloud --ignore=**/*.TestSuite.php run -d src -t docs/api",
+        "deploy": "bash ./scripts/deploy.sh"
     },
     "require": {
         "ua1-labs/firebug": "2.*",
