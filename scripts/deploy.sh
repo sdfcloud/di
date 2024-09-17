@@ -12,7 +12,7 @@ GIT_STATUS="$(git status)";
 #if [[ "$GIT_STATUS" == *"docs/api"* ]]; then
   echo "Updating docs for build $LIB_VERSION";
   git add .
-  git commit -m 'Updating docs for build  `${LIB_VERSION}`'
+  git commit -m '\"Updating docs for build ${LIB_VERSION}\"'
   git push origin master
 #fi
 
