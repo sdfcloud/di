@@ -27,8 +27,8 @@ class Di implements ContainerInterface {
     private $objectCache;
 
     /**
-     * A dependency graph containing information about classes
-     * and their dependencies.
+     * A dependency graph containing information about classes and
+     * their dependencies.
      * @var \Sdfcloud\Di\Graph
      */
     private $classDependencyGraph;
@@ -120,7 +120,7 @@ class Di implements ContainerInterface {
     }
 
     /**
-     * Returns the cached object if it exists. Otherwise it returns null.
+     * Returns the cached object if it exists. Otherwise it will return null.
      * @param string $classname The classname you want to obtain the object for.
      * @return mixed|null
      */

@@ -1,6 +1,6 @@
 {
     "name": "sdfcloud/di",
-    "version": "3.0.3",
+    "version": "3.0.4",
     "description": "sdfcloud\\di is a powerful and lightweight php dependency injection library.",
     "license": "MIT",
     "authors": [
