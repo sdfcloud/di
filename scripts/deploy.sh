@@ -9,13 +9,14 @@ php phpDocumentor.phar --defaultpackagename=Sdfcloud --ignore=**/*.TestSuite.php
 
 # commit docs if change is present
 GIT_STATUS="$(git status)";
-#if [[ "$GIT_STATUS" == *"docs/api"* ]]; then
+if [[ "$GIT_STATUS" == *"docs/api"* ]]; then
   COMMIT_MSG="'Updating docs for build $LIB_VERSION'";
   echo $COMMIT_MSG;
   git add .
   git commit -m "$(echo $COMMIT_MSG)"
   git push origin master
-#fi
+fi
 
+# push build tag
 git tag ${LIB_VERSION}
 git push origin ${LIB_VERSION}
