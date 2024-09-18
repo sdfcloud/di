@@ -173,7 +173,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Sdfcloud\\Di\u003A\u003AgetCachedObject\u0028\u0029",
             "name": "getCachedObject",
-            "summary": "Returns\u0020the\u0020cached\u0020object\u0020if\u0020it\u0020exists.\u0020Otherwise\u0020it\u0020returns\u0020null.",
+            "summary": "Returns\u0020the\u0020cached\u0020object\u0020if\u0020it\u0020exists.\u0020Otherwise\u0020it\u0020will\u0020return\u0020null.",
             "url": "classes/Sdfcloud-Di.html#method_getCachedObject"
         },                {
             "fqsen": "\\Sdfcloud\\Di\u003A\u003AsetCachedObject\u0028\u0029",
@@ -228,7 +228,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Sdfcloud\\Di\u003A\u003A\u0024classDependencyGraph",
             "name": "classDependencyGraph",
-            "summary": "A\u0020dependency\u0020graph\u0020containing\u0020information\u0020about\u0020classes\nand\u0020their\u0020dependencies.",
+            "summary": "A\u0020dependency\u0020graph\u0020containing\u0020information\u0020about\u0020classes\u0020and\ntheir\u0020dependencies.",
             "url": "classes/Sdfcloud-Di.html#property_classDependencyGraph"
         },                {
             "fqsen": "\\Sdfcloud\\DiException",
